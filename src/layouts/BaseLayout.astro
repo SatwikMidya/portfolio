@@ -1,0 +1,30 @@
+---
+const { title = "Satwik Midya | Portfolio" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>{title}</title>
+        <link rel="stylesheet" href="/styles/global.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Satwik Midya</h1>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/blog">Blog</a>
+            </nav>
+        </header>
+
+        <main>
+            <slot />
+        </main>
+
+        <footer>
+            <p>© 2025 Satwik Midya</p>
+        </footer>
+    </body>
+</html>

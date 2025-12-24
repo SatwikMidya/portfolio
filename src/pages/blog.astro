@@ -1,0 +1,20 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const posts = await Astro.glob("../content/blog/*.md");
+---
+
+<BaseLayout title="Blog | Satwik Midya">
+    <h2>Blog</h2>
+
+    {
+        posts.map((post) => (
+            <article>
+                <h3>
+                    <a href={post.url}>{post.frontmatter.title}</a>
+                </h3>
+                <p>{post.frontmatter.description}</p>
+                <small>{post.frontmatter.date}</small>
+            </article>
+        ))
+    }
+</BaseLayout>
